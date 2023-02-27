@@ -8,7 +8,8 @@ class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      nameValue:'',
+      expFields:2,
+      eduFields:1,
     }
   }
 
@@ -26,7 +27,7 @@ class App extends React.Component{
         <div className="App text-xl lg:flex p-4 justify-around gap-5 min-h-screen
         ">
         
-          <MainForm inputChange = {this.inputChange}/>
+          <MainForm inputChange = {this.inputChange} eduFields={this.state.eduFields} expFields={this.state.expFields}/>
 
           <Preview state = {this.state}/>
 
