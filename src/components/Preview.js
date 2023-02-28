@@ -2,6 +2,33 @@
 import React from "react"
 
 export default class Preview extends React.Component{
+    createEduFields(){
+        let allFields = []
+        for(let i = 0;i < this.props.state.eduFields;i++){
+            allFields.push(
+                <>
+                <h3>I'M EDUCATED</h3>
+                </>
+            )
+        }
+        return(
+            allFields
+        )
+    }
+
+    createExpFields(){
+        let allFields = []
+        for(let i = 0;i < this.props.state.expFields;i++){
+            allFields.push(
+                <>
+                <h3>I'M Experienced!@</h3>
+                </>
+            )
+        }
+        return(
+            allFields
+        )
+    }
 
     render(){
         return(
@@ -20,13 +47,18 @@ export default class Preview extends React.Component{
 
                 {console.log(this.props.state)}
             </div>
-                
+            </section>
 
-
-
-
+            <section>
+                <h1>Education</h1>
+                {this.createEduFields()}
             </section>
                
+
+            <section>
+                <h1>Experience</h1>
+                {this.createExpFields()}
+            </section>
 
            </div>
         )
