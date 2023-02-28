@@ -8,9 +8,8 @@ import InputField from "./InputField"
 export default class FormSection extends React.Component{
   
     CreateInputFields = ()=>{
-        
         return this.props.inputs.map((item,i)=>{
-            return <InputField name={item} inputChange = {this.props.inputChange}/>
+            return <InputField  key={i}  name={item} inputChange = {this.props.inputChange}/>
         })
     }
 

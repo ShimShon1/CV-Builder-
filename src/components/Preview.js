@@ -12,7 +12,7 @@ export default class Preview extends React.Component{
             let index = i>0?i:""
 
             allFields.push(
-                <div className="ml-2 p-4 border-b border-dashed ">
+            <div className="ml-2 p-4 border-b border-dashed " key={i}>
                 <span className="text-gray-600 text-sm" >{this.props.state['fromedu'+ index] }  
                 &nbsp;- {this.props.state['toedu'+ index]} </span>
                 
@@ -34,13 +34,10 @@ export default class Preview extends React.Component{
 
     createExpFields(){
         let allFields = []
-        for(let item of Object.keys(this.props.state)){
-            console.log(this.props.state[item][0]);
-        }
         for(let i = 0;i < this.props.state.expFields;i++){
             let index = i>0?i:""
             allFields.push(
-                <div className="ml-2 p-4 border-b border-dashed">
+                <div className="ml-2 p-4 border-b border-dashed" key={i}>
                     <span className="text-gray-600 text-sm" >{this.props.state['fromexp'+ index] }  
                     &nbsp;	 -  {this.props.state['toexp'+ index]}</span>
                     

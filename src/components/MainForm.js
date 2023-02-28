@@ -18,7 +18,7 @@ export default class MainForm extends React.Component{
         let sections = []
         for (let i = 1; i < 0 + field; i++) {
         
-            sections.push(<FormSection name = {name} inputs = {inputs.map((item)=>{
+            sections.push(<FormSection name = {name} key={i} inputs = {inputs.map((item)=>{
                 if(i > 0){
 
                     return [...item, i]
