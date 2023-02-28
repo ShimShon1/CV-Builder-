@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cv-builder/static/css/main.ac17dfee.css",
+    "main.js": "/cv-builder/static/js/main.e8c48515.js",
+    "index.html": "/cv-builder/index.html",
+    "main.ac17dfee.css.map": "/cv-builder/static/css/main.ac17dfee.css.map",
+    "main.e8c48515.js.map": "/cv-builder/static/js/main.e8c48515.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac17dfee.css",
+    "static/js/main.e8c48515.js"
+  ]
+}
