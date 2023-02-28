@@ -4,7 +4,7 @@ import FormSection from "./FormSection"
 import SectionHeader from "./SectionHeader"
 
 
-const personalInputs = [["name"],["last name"],["adress"],["email"],["phone"]]
+const personalInputs = [["name"],["last name"],["address"],["email"],["phone"]]
 const educationInputs = [["institution"],["degree"],["fromedu"],["toedu"]]
 const experienceInputs = [["company"],["title"],["fromexp"],["toexp"],["description"],]
 
