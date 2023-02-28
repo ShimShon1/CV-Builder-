@@ -5,8 +5,8 @@ import SectionHeader from "./SectionHeader"
 
 
 const personalInputs = [["name"],["last name"],["adress"],["email"],["phone"]]
-const educationInputs = [["institution"],["degree"],["from","edu"],["to","edu"]]
-const experienceInputs = [["title"],["company"],["description"],["from","exp"],["to","exp"]]
+const educationInputs = [["degree"],["institution"],["fromedu"],["toedu"]]
+const experienceInputs = [["company"],["title"],["fromexp"],["toexp"],["description"],]
 
 export default class MainForm extends React.Component{
     addSection(name,inputs,field = 1){
@@ -14,7 +14,13 @@ export default class MainForm extends React.Component{
         for (let i = 1; i < 0 + field; i++) {
         
             sections.push(<FormSection name = {name} inputs = {inputs.map((item)=>{
-                return [...item, i]
+                if(i > 0){
+
+                    return [...item, i]
+
+                }else{
+                    return [...item,]
+                }
             })} inputChange = {this.props.inputChange} />)
             }
         return(
@@ -23,16 +29,14 @@ export default class MainForm extends React.Component{
     }
    
     render(){
-        console.log(this.props);
         return(
            <form  className=" border-2 lg:w-1/2 shadow-md ">
-                {/* {console.log(this.props.value)} */}
        
             <SectionHeader name="Personal Details" expandable ={false} fieldsChange  = {this.props.fieldsChange} />
 
 
 
-            <FormSection  inputs={personalInputs} inputChange = {this.props.inputChange} />
+            <FormSection  inputs={personalInputs} inputChange = {this.props.inputChange} name="personal" />
 
            {this.addSection("Personal Details", personalInputs)}
 

@@ -8,13 +8,12 @@ class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+      eduFields:1,
       expFields:2,
-      eduFields:2,
     }
   }
 
   fieldsChange = (field,action)=>{
-    console.log('called',this.state);
 
     if(action === "+"){
       this.setState(
@@ -34,9 +33,9 @@ class App extends React.Component{
 
 
   inputChange = (e)=>{
-    console.log(e.target.name);
+    // console.log(e.target.name);
 
-    console.log(e.target.value);
+    // console.log(e.target.value);
 
     this.setState(
       {[e.target.name]: [e.target.value]}
